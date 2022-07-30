@@ -7,12 +7,16 @@
     flex: 3%;
     border: 1px solid red;
 }
+#space1-tool > div{
+    flex-direction: column;
+}
 #tool-bar{
-    
+    width: 50%;
+    display: flex;
+    justify-content: space-around;
 }
 #space2-tool{
-    display: flex;
-    height: 50px;
+    display: flex;   
     border: 1px solid red;
 }
 #blank{

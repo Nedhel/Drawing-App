@@ -3,27 +3,31 @@
     <head>
         <title>Drawing App</title>
         <link rel="stylesheet" href="index.css">
+        <script src="index.js"></script>
     </head>
     <body>
         <h1>My Drawing App</h1>
         <div id="container">
             <div id="space1-tool" ondrop="drop(event)" ondragover="allowDrop(event)">
-                <div id="tool-bar" draggable="true" ondragstart="drag(event)">
-                    <button type="button" id="blue" style="background-color: blue"></button>
-                    <button type="button" id="red" style="background-color: red"></button>
-                    <button type="button" id="black" style="background-color: black"></button>
-                    <button type="button" id="green" style="background-color: green"></button>
-                    <button type="button" id="pink" style="background-color: pink"></button>
-                    <button type="button" id="purple" style="background-color: purple"></button>
-                    <button type="button" id="yellow" style="background-color: yellow"></button>
-                    <button type="button" id="gray" style="background-color: gray"></button>
-                    <button type="button" id="orange" style="background-color: orange"></button>
-                    <button type="button" id="gold" style="background-color: gold"></button>
-                    <button type="button" id="silver" style="background-color: silver"></button>
-                    <button type="button" id="marine" style="background-color: mediumaquamarine"></button>
-                    <span class="fontB">&#10002;</span>
-                    <span class="fontM">&#11036;</span>
-                
+                <div id="tool-bar" draggable="true" ondragstart="drag(event)">                    
+                    <div>
+                        <button type="button" id="blue" style="background-color: blue"></button>
+                        <button type="button" id="red" style="background-color: red"></button>
+                        <button type="button" id="black" style="background-color: black"></button>
+                        <button type="button" id="green" style="background-color: green"></button>
+                        <button type="button" id="pink" style="background-color: pink"></button>
+                        <button type="button" id="purple" style="background-color: purple"></button>
+                        <button type="button" id="yellow" style="background-color: yellow"></button>
+                        <button type="button" id="gray" style="background-color: gray"></button>
+                        <button type="button" id="orange" style="background-color: orange"></button>
+                        <button type="button" id="gold" style="background-color: gold"></button>
+                        <button type="button" id="silver" style="background-color: silver"></button>
+                        <button type="button" id="marine" style="background-color: mediumaquamarine"></button>
+                    </div>                   
+                    <div class="fontB">&#10002;</div>
+                    <div class="fontM">&#11036;</div>
+                    <div class="fontB">|</div>
+                    <div class="fontB">(</div>                                  
                 </div>
             </div>            
             <div id="blank">

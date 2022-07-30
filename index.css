@@ -1,0 +1,35 @@
+#container{
+    display: flex;
+    border: 1px solid green;
+    height: 600px;/*poner con javascript*/
+}
+#space1-tool{
+    flex: 3%;
+    border: 1px solid red;
+}
+#tool-bar{
+    
+}
+#space2-tool{
+    display: flex;
+    height: 50px;
+    border: 1px solid red;
+}
+#blank{
+    flex: 97%;
+    border: 1px solid black;
+}
+button{
+    width: 15px;
+    height: 15px;
+}
+.fontB{
+    font-size: 40px;
+}         
+.fontM{
+    font-size: 20px;
+}
+canvas{
+    width: 100%;
+    height: 100%;
+}

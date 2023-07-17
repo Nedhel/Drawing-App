@@ -1,6 +1,5 @@
-window.addEventListener("DOMContentLoaded", (event) => {
+window.addEventListener("DOMContentLoaded", () => {
     let canvas = document.getElementById("canvas");
-
     canvas.setAttribute("width", screen.width * 0.9);
     canvas.setAttribute("height", screen.height * 0.75);
     let ctx = canvas.getContext("2d");
@@ -14,11 +13,11 @@ window.addEventListener("DOMContentLoaded", (event) => {
         if (event.which === 1) {
             initialX = event.offsetX;
             initialY = event.offsetY;
-            dibujar(initialX, initialY);
+            draw(initialX, initialY);
             canvas.addEventListener("mousemove", mouseMove);
         }
     };
-    const dibujar = (cursorX, cursorY) => {
+    const draw = (cursorX, cursorY) => {
         ctx.beginPath();
         ctx.moveTo(initialX, initialY);
         ctx.lineTo(cursorX, cursorY);
@@ -28,7 +27,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
         initialY = cursorY;
     };
     const mouseMove = (event) => {
-        dibujar(event.offsetX, event.offsetY);
+        draw(event.offsetX, event.offsetY);
     };
     const mouseUp = () => {
         canvas.removeEventListener("mousemove", mouseMove);
@@ -37,7 +36,11 @@ window.addEventListener("DOMContentLoaded", (event) => {
     function changeColor(color) {
         let current = document.getElementById("current");
         current.style.backgroundColor = color;
-        ctx.strokeStyle = color;
+        if (
+            document.getElementById("pen").classList.contains("tool-selected")
+        ) {
+            ctx.strokeStyle = color;
+        }
     }
 
     function changeSize() {
@@ -102,7 +105,6 @@ window.addEventListener("DOMContentLoaded", (event) => {
     canvas.addEventListener("mousedown", mouseDown);
     canvas.addEventListener("mouseup", mouseUp);
     canvas.addEventListener("mouseleave", () => {
-        console.log("hola");
         canvas.removeEventListener("mousemove", mouseMove);
     });
     canvas.addEventListener("contextmenu", (e) => {
@@ -110,14 +112,14 @@ window.addEventListener("DOMContentLoaded", (event) => {
     });
     document.getElementById("eraser").addEventListener("click", () => {
         ctx.strokeStyle = "white";
-        document.getElementById("pen").classList.toggle("tool-selected");
-        document.getElementById("eraser").classList.toggle("tool-selected");
+        document.getElementById("pen").classList.remove("tool-selected");
+        document.getElementById("eraser").classList.add("tool-selected");
     });
     document.getElementById("pen").addEventListener("click", () => {
         ctx.strokeStyle =
             document.getElementById("current").style.backgroundColor;
-        document.getElementById("pen").classList.toggle("tool-selected");
-        document.getElementById("eraser").classList.toggle("tool-selected");
+        document.getElementById("pen").classList.add("tool-selected");
+        document.getElementById("eraser").classList.remove("tool-selected");
     });
 
     document.getElementById("selec-color").addEventListener("change", (e) => {

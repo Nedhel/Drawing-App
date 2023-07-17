@@ -1,39 +1,121 @@
-#container{
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+nav {
     display: flex;
-    border: 1px solid green;
-    height: 600px;/*poner con javascript*/
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(25, 23, 23, 0.858);
+    color: aliceblue;
+    padding: 3px 0;
+    gap: 10px;
 }
-#space1-tool{
-    flex: 3%;
-    border: 1px solid red;
+
+.icon {
+    width: 30px;
 }
-#space1-tool > div{
-    flex-direction: column;
-}
-#tool-bar{
-    width: 50%;
+
+main {
     display: flex;
-    justify-content: space-around;
 }
-#space2-tool{
-    display: flex;   
-    border: 1px solid red;
-}
-#blank{
-    flex: 97%;
+
+#canvas {
     border: 1px solid black;
 }
-button{
-    width: 15px;
-    height: 15px;
+
+p {
+    margin: 2px 0;
+    text-align: center;
 }
-.fontB{
-    font-size: 40px;
-}         
-.fontM{
-    font-size: 20px;
+
+.tools-right {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    gap: 5px;
+    border: 1px solid black;
 }
-canvas{
+
+.tools-right img {
+    width: 20px;
+}
+
+.tools-right div {
+    display: flex;
+    gap: 5px;
+}
+
+.size1 {
+    padding: 8px;
+}
+
+.size2 {
+    padding: 6px;
+}
+
+.size3 {
+    padding: 4px;
+}
+
+.size4 {
+    padding: 0px;
+}
+
+.color {
+    width: 35px;
+    height: 35px;
+}
+
+.black {
+    background-color: black;
+}
+
+.red {
+    background-color: red;
+}
+
+.blue {
+    background-color: blue;
+}
+
+.yellow {
+    background-color: yellow;
+}
+
+.violet {
+    background-color: violet;
+}
+
+.green {
+    background-color: green;
+}
+
+.greenyellow {
+    background-color: greenyellow;
+}
+
+.gray {
+    background-color: gray;
+}
+
+.orange {
+    background-color: orange;
+}
+
+.pink {
+    background-color: pink;
+}
+
+#selec-color {
     width: 100%;
-    height: 100%;
+}
+
+.tool-selected {
+    background-image: radial-gradient(white, rgb(113, 221, 233));
 }

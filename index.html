@@ -7,5 +7,81 @@
         <script src="./js/canvas.js"></script>
         <link rel="stylesheet" href="./style/canvas.css" />
     </head>
-    <body></body>
+    <body>
+        <nav>
+            <div>Zrawing App</div>
+            <div>
+                <img
+                    src="./img/icon.png"
+                    alt="Icon brush with colors"
+                    class="icon"
+                />
+            </div>
+        </nav>
+        <main>
+            <canvas id="canvas"></canvas>
+            <div class="tools-right">
+                <div>
+                    <button id="pen" class="tool-selected">
+                        <img src="./img/pen.png" alt="pen" />
+                    </button>
+                    <button id="eraser">
+                        <img src="./img/eraser.png" alt="eraser" />
+                    </button>
+                </div>
+                <p>Size</p>
+                <div>
+                    <button id="size1" class="size tool-selected">
+                        <img src="./img/stain.png" alt="stain" class="size1" />
+                    </button>
+                    <button id="size2" class="size">
+                        <img src="./img/stain.png" alt="stain" class="size2" />
+                    </button>
+                </div>
+                <div>
+                    <button id="size3" class="size">
+                        <img src="./img/stain.png" alt="stain" class="size3" />
+                    </button>
+                    <button id="size4" class="size">
+                        <img src="./img/stain.png" alt="stain" class="size4" />
+                    </button>
+                </div>
+                <p>Current</p>
+                <div>
+                    <button
+                        style="
+                            background-color: black;
+                            width: 100%;
+                            height: 20px;
+                        "
+                        id="current"
+                    ></button>
+                </div>
+                <p>Colors</p>
+                <div>
+                    <button class="color black"></button>
+                    <button class="color red"></button>
+                </div>
+                <div>
+                    <button class="color blue"></button>
+                    <button class="color yellow"></button>
+                </div>
+                <div>
+                    <button class="color violet"></button>
+                    <button class="color green"></button>
+                </div>
+                <div>
+                    <button class="color greenyellow"></button>
+                    <button class="color gray"></button>
+                </div>
+                <div>
+                    <button class="color orange"></button>
+                    <button class="color pink"></button>
+                </div>
+                <div>
+                    <input type="color" id="selec-color" />
+                </div>
+            </div>
+        </main>
+    </body>
 </html>
